@@ -1,29 +1,45 @@
 import React from 'react';
-import { Sequence } from 'remotion';
+import { Sequence, Audio, staticFile } from 'remotion';
 import { SeedScene } from './components/SeedScene';
 import { SproutScene } from './components/SproutScene';
 import { YoungPlantScene } from './components/YoungPlantScene';
 import { MaturePlantScene } from './components/MaturePlantScene';
 import { HarvestScene } from './components/HarvestScene';
+import { scenes } from './data/scenes';
+
+const durations = require('./data/durations.json') as Record<string, number>;
+
+const sceneComponents = {
+  seed: SeedScene,
+  sprout: SproutScene,
+  young: YoungPlantScene,
+  mature: MaturePlantScene,
+  harvest: HarvestScene,
+};
 
 export const Video: React.FC = () => {
+  let currentFrame = 0;
+
   return (
     <>
-      <Sequence from={0} durationInFrames={270}>
-        <SeedScene />
-      </Sequence>
-      <Sequence from={270} durationInFrames={270}>
-        <SproutScene />
-      </Sequence>
-      <Sequence from={540} durationInFrames={270}>
-        <YoungPlantScene />
-      </Sequence>
-      <Sequence from={810} durationInFrames={270}>
-        <MaturePlantScene />
-      </Sequence>
-      <Sequence from={1080} durationInFrames={270}>
-        <HarvestScene />
-      </Sequence>
+      {scenes.map((scene) => {
+        const duration = durations[scene.id];
+        const Component = sceneComponents[scene.id as keyof typeof sceneComponents];
+
+        const sequence = (
+          <Sequence
+            key={scene.id}
+            from={currentFrame}
+            durationInFrames={duration}
+          >
+            <Audio src={staticFile(`audio/${scene.id}.mp3`)} />
+            <Component />
+          </Sequence>
+        );
+
+        currentFrame += duration;
+        return sequence;
+      })}
     </>
   );
 };

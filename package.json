@@ -5,13 +5,21 @@
   "scripts": {
     "dev": "remotion studio src/index.ts",
     "build": "remotion bundle src/index.ts",
-    "render": "remotion render src/index.ts TomatoLifecycle out/video.mp4"
+    "render": "remotion render src/index.ts TomatoLifecycle out/video.mp4",
+    "generate:audio": "ts-node scripts/generate-audio.ts",
+    "generate:durations": "ts-node scripts/getDurations.ts",
+    "build:video": "npm run generate:audio && npm run generate:durations && npm run render"
   },
   "dependencies": {
+    "@elevenlabs/elevenlabs-js": "^2.42.0",
     "@remotion/cli": "^4.0.448",
     "@remotion/renderer": "^4.0.448",
+    "dotenv": "^17.4.1",
+    "ffmpeg-static": "^5.3.0",
+    "fluent-ffmpeg": "^2.1.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "ts-node": "^10.9.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
