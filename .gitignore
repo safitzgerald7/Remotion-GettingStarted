@@ -48,7 +48,21 @@ coverage/
 .DS_Store
 .DS_Store?
 ._*
+
+# Playwright test artifacts
+test-results/
+playwright-report/
+
+# Test screenshots (generated during validation)
+tests/screenshots/
 .Spotlight-V100
 .Trashes
 ehthumbs.db
 Thumbs.db
+build
+# Playwright test artifacts
+test-results/
+playwright-report/
+
+# Test screenshots (generated during validation)
+tests/screenshots/
