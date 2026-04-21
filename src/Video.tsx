@@ -1,5 +1,7 @@
 import React from 'react';
-import { Sequence, Audio, staticFile } from 'remotion';
+import { TransitionSeries, linearTiming } from '@remotion/transitions';
+import { fade } from '@remotion/transitions/fade';
+import { Audio, staticFile } from 'remotion';
 import { SeedScene } from './components/SeedScene';
 import { SproutScene } from './components/SproutScene';
 import { YoungPlantScene } from './components/YoungPlantScene';
@@ -18,28 +20,27 @@ const sceneComponents = {
 };
 
 export const Video: React.FC = () => {
-  let currentFrame = 0;
-
   return (
-    <>
-      {scenes.map((scene) => {
+    <TransitionSeries>
+      {scenes.map((scene, index) => {
         const duration = durations[scene.id];
         const Component = sceneComponents[scene.id as keyof typeof sceneComponents];
 
-        const sequence = (
-          <Sequence
-            key={scene.id}
-            from={currentFrame}
-            durationInFrames={duration}
-          >
-            <Audio src={staticFile(`audio/${scene.id}.mp3`)} />
-            <Component />
-          </Sequence>
+        return (
+          <React.Fragment key={scene.id}>
+            <TransitionSeries.Sequence durationInFrames={duration}>
+              <Audio src={staticFile(`audio/${scene.id}.mp3`)} />
+              <Component />
+            </TransitionSeries.Sequence>
+            {index < scenes.length - 1 && (
+              <TransitionSeries.Transition
+                presentation={fade()}
+                timing={linearTiming({ durationInFrames: 15 })}
+              />
+            )}
+          </React.Fragment>
         );
-
-        currentFrame += duration;
-        return sequence;
       })}
-    </>
+    </TransitionSeries>
   );
 };
