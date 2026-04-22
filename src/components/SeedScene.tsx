@@ -45,7 +45,7 @@ export const SeedScene: React.FC = () => {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
-    background: 'linear-gradient(135deg, #fef7f0 0%, #f8f4f0 50%, #f0ebe6 100%)',
+    background: 'linear-gradient(135deg, #dceddc 0%, #c8e6c8 50%, #b8ddb8 100%)',
     fontFamily: inter.fontFamily,
     opacity,
     overflow: 'hidden',
@@ -109,21 +109,21 @@ export const SeedScene: React.FC = () => {
   };
 
   const titleStyle: React.CSSProperties = {
-    fontSize: '72px',
+    fontSize: '60px',
     fontFamily: playfair.fontFamily,
-    color: '#2D3748',
+    color: '#0D1117',
     textAlign: 'center',
     marginBottom: '20px',
     fontWeight: '700',
-    letterSpacing: '-2px',
-    textShadow: '0 4px 20px rgba(45, 55, 72, 0.3)',
+    letterSpacing: '-1px',
+    textShadow: '0 4px 20px rgba(13, 17, 23, 0.3)',
     position: 'relative',
     zIndex: 2,
   };
 
   const subtitleStyle: React.CSSProperties = {
-    fontSize: '32px',
-    color: '#4A5568',
+    fontSize: '26px',
+    color: '#161B22',
     textAlign: 'center',
     fontWeight: '400',
     letterSpacing: '0.5px',

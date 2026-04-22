@@ -45,7 +45,7 @@ export const SproutScene: React.FC = () => {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
-    background: 'linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 50%, #e0f2e0 100%)',
+    background: 'linear-gradient(135deg, #dceddc 0%, #c8e6c8 50%, #b8ddb8 100%)',
     fontFamily: inter.fontFamily,
     opacity,
     overflow: 'hidden',
@@ -146,21 +146,21 @@ export const SproutScene: React.FC = () => {
   ];
 
   const titleStyle: React.CSSProperties = {
-    fontSize: '68px',
+    fontSize: '60px',
     fontFamily: playfair.fontFamily,
-    color: '#1A365D',
+    color: '#0D1117',
     textAlign: 'center',
     marginBottom: '20px',
     fontWeight: '700',
-    letterSpacing: '-1.5px',
-    textShadow: '0 4px 20px rgba(26, 54, 93, 0.3)',
+    letterSpacing: '-1px',
+    textShadow: '0 4px 20px rgba(13, 17, 23, 0.3)',
     position: 'relative',
     zIndex: 2,
   };
 
   const subtitleStyle: React.CSSProperties = {
-    fontSize: '30px',
-    color: '#2D3748',
+    fontSize: '26px',
+    color: '#161B22',
     textAlign: 'center',
     fontWeight: '400',
     letterSpacing: '0.5px',

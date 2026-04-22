@@ -45,7 +45,7 @@ export const YoungPlantScene: React.FC = () => {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
-    background: 'linear-gradient(135deg, #e8f5e8 0%, #dceddc 50%, #d0e7d0 100%)',
+    background: 'linear-gradient(135deg, #dceddc 0%, #c8e6c8 50%, #b8ddb8 100%)',
     fontFamily: inter.fontFamily,
     opacity,
     overflow: 'hidden',
@@ -159,21 +159,21 @@ export const YoungPlantScene: React.FC = () => {
   ];
 
   const titleStyle: React.CSSProperties = {
-    fontSize: '64px',
+    fontSize: '60px',
     fontFamily: playfair.fontFamily,
-    color: '#0F1419',
+    color: '#0D1117',
     textAlign: 'center',
     marginBottom: '20px',
     fontWeight: '700',
-    letterSpacing: '-1.2px',
-    textShadow: '0 4px 20px rgba(15, 20, 25, 0.3)',
+    letterSpacing: '-1px',
+    textShadow: '0 4px 20px rgba(13, 17, 23, 0.3)',
     position: 'relative',
     zIndex: 2,
   };
 
   const subtitleStyle: React.CSSProperties = {
-    fontSize: '28px',
-    color: '#1A202C',
+    fontSize: '26px',
+    color: '#161B22',
     textAlign: 'center',
     fontWeight: '400',
     letterSpacing: '0.5px',

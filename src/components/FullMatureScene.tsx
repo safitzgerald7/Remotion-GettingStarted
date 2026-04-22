@@ -45,7 +45,7 @@ export const FullMatureScene: React.FC = () => {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
-    background: 'linear-gradient(135deg, #c8e6c8 0%, #b8ddb8 50%, #a8d5a8 100%)',
+    background: 'linear-gradient(135deg, #dceddc 0%, #c8e6c8 50%, #b8ddb8 100%)',
     fontFamily: inter.fontFamily,
     opacity,
     overflow: 'hidden',

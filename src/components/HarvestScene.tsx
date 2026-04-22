@@ -59,7 +59,7 @@ export const HarvestScene: React.FC = () => {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
-    background: 'linear-gradient(135deg, #b8ddb8 0%, #a8d5a8 50%, #98cd98 100%)',
+    background: 'linear-gradient(135deg, #dceddc 0%, #c8e6c8 50%, #b8ddb8 100%)',
     fontFamily: inter.fontFamily,
     opacity,
     overflow: 'hidden',
@@ -145,22 +145,22 @@ export const HarvestScene: React.FC = () => {
   ];
 
   const titleStyle: React.CSSProperties = {
-    fontSize: '56px',
+    fontSize: '60px',
     fontFamily: playfair.fontFamily,
-    color: '#0A0F0A',
+    color: '#0D1117',
     textAlign: 'center',
     marginBottom: '20px',
     fontWeight: '700',
-    letterSpacing: '-0.8px',
-    textShadow: '0 4px 20px rgba(10, 15, 10, 0.4)',
+    letterSpacing: '-1px',
+    textShadow: '0 4px 20px rgba(13, 17, 23, 0.3)',
     position: 'relative',
     zIndex: 2,
     transform: `translateX(${textTranslateX}px)`,
   };
 
   const subtitleStyle: React.CSSProperties = {
-    fontSize: '24px',
-    color: '#0F1410',
+    fontSize: '26px',
+    color: '#161B22',
     textAlign: 'center',
     fontWeight: '400',
     letterSpacing: '0.5px',
