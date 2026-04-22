@@ -17,6 +17,13 @@ export const HarvestScene: React.FC = () => {
     easing: Easing.bezier(0.25, 0.46, 0.45, 0.94),
   });
 
+  // Slide transition from left
+  const slideX = interpolate(frame, [0, 1 * fps], [-100, 0], {
+    extrapolateRight: 'clamp',
+    extrapolateLeft: 'clamp',
+    easing: Easing.bezier(0.25, 0.46, 0.45, 0.94),
+  });
+
   // Final growth animation
   const scale = interpolate(frame, [0, 1.5 * fps], [0.7, 1], {
     extrapolateRight: 'clamp',
@@ -33,20 +40,6 @@ export const HarvestScene: React.FC = () => {
 
   // Wind sway motion
   const rotate = interpolate(frame, [0, 2 * fps], [1, -1.5], {
-    extrapolateRight: 'clamp',
-    extrapolateLeft: 'clamp',
-    easing: Easing.bezier(0.25, 0.46, 0.45, 0.94),
-  });
-
-  // Slide-in from left for plant
-  const plantTranslateX = interpolate(frame, [0, 2.5 * fps], [-200, 0], {
-    extrapolateRight: 'clamp',
-    extrapolateLeft: 'clamp',
-    easing: Easing.bezier(0.25, 0.46, 0.45, 0.94),
-  });
-
-  // Slide-in from right for text
-  const textTranslateX = interpolate(frame, [0, 2.5 * fps], [200, 0], {
     extrapolateRight: 'clamp',
     extrapolateLeft: 'clamp',
     easing: Easing.bezier(0.25, 0.46, 0.45, 0.94),
@@ -85,7 +78,7 @@ export const HarvestScene: React.FC = () => {
   const plantContainer: React.CSSProperties = {
     position: 'relative',
     marginBottom: '60px',
-    transform: `scale(${scale}) translateY(${translateY}px) rotate(${rotate}deg) translateX(${plantTranslateX}px)`,
+    transform: `translateX(${slideX}%) scale(${scale}) translateY(${translateY}px) rotate(${rotate}deg)`,
     filter: 'drop-shadow(0 25px 55px rgba(76, 175, 80, 0.15))',
   };
 
@@ -155,7 +148,6 @@ export const HarvestScene: React.FC = () => {
     textShadow: '0 4px 20px rgba(10, 15, 10, 0.4)',
     position: 'relative',
     zIndex: 2,
-    transform: `translateX(${textTranslateX}px)`,
   };
 
   const subtitleStyle: React.CSSProperties = {
@@ -168,7 +160,6 @@ export const HarvestScene: React.FC = () => {
     lineHeight: '1.4',
     position: 'relative',
     zIndex: 2,
-    transform: `translateX(${textTranslateX}px)`,
   };
 
   const harvestGlow: React.CSSProperties = {

@@ -6,7 +6,7 @@ import { loadFont as loadInter } from '@remotion/google-fonts/Inter';
 const playfair = loadFont();
 const inter = loadInter();
 
-export const MaturePlantScene: React.FC = () => {
+export const MaturePlantsExtendedScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -104,6 +104,7 @@ export const MaturePlantScene: React.FC = () => {
     { bottom: '120px', left: '50%', transform: 'translateX(-50%) rotate(40deg)', width: '70px', height: '6px' },
     { bottom: '100px', left: '50%', transform: 'translateX(-50%) rotate(-50deg)', width: '65px', height: '6px' },
     { bottom: '160px', left: '50%', transform: 'translateX(-50%) rotate(25deg)', width: '75px', height: '6px' },
+    { bottom: '180px', left: '50%', transform: 'translateX(-50%) rotate(-20deg)', width: '85px', height: '6px' },
   ];
 
   const tomatoes: any[] = [
@@ -112,6 +113,9 @@ export const MaturePlantScene: React.FC = () => {
     { bottom: '105px', left: '20%', transform: 'translateX(-50%)', size: 16, color: '#FF7043' },
     { bottom: '165px', left: '80%', transform: 'translateX(-50%)', size: 19, color: '#FF5722' },
     { bottom: '135px', left: '45%', transform: 'translateX(-50%)', size: 17, color: '#FF6B35' },
+    { bottom: '155px', left: '15%', transform: 'translateX(-50%)', size: 21, color: '#FF5722' },
+    { bottom: '175px', left: '70%', transform: 'translateX(-50%)', size: 18, color: '#FF6B35' },
+    { bottom: '185px', left: '40%', transform: 'translateX(-50%)', size: 19, color: '#FF7043' },
   ];
 
   const leaves: React.CSSProperties[] = [
@@ -124,6 +128,7 @@ export const MaturePlantScene: React.FC = () => {
     { bottom: '130px', left: '70%', transform: 'translateX(-50%) rotate(50deg)', width: '60px', height: '38px', borderRadius: '30px 30px 5px 32px' },
     { bottom: '95px', left: '35%', transform: 'translateX(-50%) rotate(-55deg)', width: '58px', height: '36px', borderRadius: '29px 29px 29px 5px' },
     { bottom: '115px', left: '65%', transform: 'translateX(-50%) rotate(60deg)', width: '55px', height: '34px', borderRadius: '27px 27px 4px 29px' },
+    { bottom: '190px', left: '55%', transform: 'translateX(-50%) rotate(15deg)', width: '70px', height: '45px', borderRadius: '35px 35px 7px 37px' },
   ];
 
   const titleStyle: React.CSSProperties = {
@@ -211,10 +216,10 @@ export const MaturePlantScene: React.FC = () => {
         ))}
       </div>
 
-      <h1 style={titleStyle}>Bearing Fruit</h1>
+      <h1 style={titleStyle}>Abundant Harvest</h1>
       <p style={subtitleStyle}>
-        Support with stakes and water deeply<br />
-        to nourish the growing bounty
+        The plants are laden with ripe tomatoes,<br />
+        ready for picking and enjoying
       </p>
     </div>
   );

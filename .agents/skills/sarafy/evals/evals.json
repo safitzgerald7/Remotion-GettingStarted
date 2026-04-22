@@ -1,0 +1,20 @@
+{
+  "skill_name": "sarafy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a new Remotion scene component for displaying a tomato growth stage with smooth fade-in transition and consistent typography using Inter font.",
+      "expected_output": "A React component for Remotion that renders a tomato growth scene with fade-in animation, using Inter font, consistent colors from a design.md palette, and proper spacing."
+    },
+    {
+      "id": 2,
+      "prompt": "Modify the existing HarvestScene.tsx to add a slide transition between frames and ensure visual consistency with the project's design system.",
+      "expected_output": "Updated HarvestScene.tsx with slide transitions, adherence to design.md colors and typography, and consistent spacing throughout the animation."
+    },
+    {
+      "id": 3,
+      "prompt": "Extend the Remotion video with a new scene showing mature plants, maintaining design consistency across all frames including transitions and text styling.",
+      "expected_output": "New scene component for mature plants, integrated into the video with consistent transitions, typography from design.md, and visual elements matching the established design system."
+    }
+  ]
+}

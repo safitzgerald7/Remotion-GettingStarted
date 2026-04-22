@@ -6,7 +6,7 @@ import { loadFont as loadInter } from '@remotion/google-fonts/Inter';
 const playfair = loadFont();
 const inter = loadInter();
 
-export const MaturePlantScene: React.FC = () => {
+export const FullMatureScene: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
@@ -17,22 +17,22 @@ export const MaturePlantScene: React.FC = () => {
     easing: Easing.bezier(0.25, 0.46, 0.45, 0.94),
   });
 
-  // Mature growth animation
-  const scale = interpolate(frame, [0, 1.5 * fps], [0.6, 1], {
+  // Mature growth animation - more pronounced
+  const scale = interpolate(frame, [0, 1.5 * fps], [0.7, 1], {
     extrapolateRight: 'clamp',
     extrapolateLeft: 'clamp',
     easing: Easing.bezier(0.68, -0.55, 0.265, 1.55),
   });
 
-  // Gentle floating motion
-  const translateY = interpolate(frame, [0, fps], [25, 0], {
+  // Gentle floating motion - more subtle for mature plants
+  const translateY = interpolate(frame, [0, fps], [15, 0], {
     extrapolateRight: 'clamp',
     extrapolateLeft: 'clamp',
     easing: Easing.bezier(0.25, 0.46, 0.45, 0.94),
   });
 
-  // Wind sway motion
-  const rotate = interpolate(frame, [0, 2 * fps], [1.5, -2.5], {
+  // Wind sway motion - gentler for heavier plants
+  const rotate = interpolate(frame, [0, 2 * fps], [0.8, -1.2], {
     extrapolateRight: 'clamp',
     extrapolateLeft: 'clamp',
     easing: Easing.bezier(0.25, 0.46, 0.45, 0.94),
@@ -45,7 +45,7 @@ export const MaturePlantScene: React.FC = () => {
     alignItems: 'center',
     justifyContent: 'center',
     height: '100%',
-    background: 'linear-gradient(135deg, #dceddc 0%, #c8e6c8 50%, #b8ddb8 100%)',
+    background: 'linear-gradient(135deg, #c8e6c8 0%, #b8ddb8 50%, #a8d5a8 100%)',
     fontFamily: inter.fontFamily,
     opacity,
     overflow: 'hidden',
@@ -72,7 +72,7 @@ export const MaturePlantScene: React.FC = () => {
     position: 'relative',
     marginBottom: '60px',
     transform: `scale(${scale}) translateY(${translateY}px) rotate(${rotate}deg)`,
-    filter: 'drop-shadow(0 20px 50px rgba(76, 175, 80, 0.2))',
+    filter: 'drop-shadow(0 25px 60px rgba(76, 175, 80, 0.25))',
   };
 
   const stakeStyle: React.CSSProperties = {
@@ -80,11 +80,11 @@ export const MaturePlantScene: React.FC = () => {
     bottom: '50px',
     left: '50%',
     transform: 'translateX(-50%)',
-    width: '6px',
-    height: '200px',
+    width: '8px',
+    height: '220px',
     background: 'linear-gradient(to top, #8B5A2B, #654321)',
-    borderRadius: '3px',
-    boxShadow: '0 0 10px rgba(139, 90, 43, 0.5)',
+    borderRadius: '4px',
+    boxShadow: '0 0 12px rgba(139, 90, 43, 0.6)',
   };
 
   const mainStem: React.CSSProperties = {
@@ -92,38 +92,47 @@ export const MaturePlantScene: React.FC = () => {
     bottom: '50px',
     left: '50%',
     transform: 'translateX(-50%)',
-    width: '12px',
-    height: '180px',
+    width: '16px',
+    height: '200px',
     background: 'linear-gradient(to top, #4CAF50, #388E3C, #2E7D32)',
-    borderRadius: '6px',
-    boxShadow: '0 0 25px rgba(76, 175, 80, 0.8)',
+    borderRadius: '8px',
+    boxShadow: '0 0 30px rgba(76, 175, 80, 0.9)',
   };
 
   const branches: React.CSSProperties[] = [
-    { bottom: '140px', left: '50%', transform: 'translateX(-50%) rotate(-35deg)', width: '80px', height: '6px' },
-    { bottom: '120px', left: '50%', transform: 'translateX(-50%) rotate(40deg)', width: '70px', height: '6px' },
-    { bottom: '100px', left: '50%', transform: 'translateX(-50%) rotate(-50deg)', width: '65px', height: '6px' },
-    { bottom: '160px', left: '50%', transform: 'translateX(-50%) rotate(25deg)', width: '75px', height: '6px' },
+    { bottom: '150px', left: '50%', transform: 'translateX(-50%) rotate(-40deg)', width: '90px', height: '8px' },
+    { bottom: '130px', left: '50%', transform: 'translateX(-50%) rotate(45deg)', width: '85px', height: '8px' },
+    { bottom: '110px', left: '50%', transform: 'translateX(-50%) rotate(-55deg)', width: '80px', height: '8px' },
+    { bottom: '170px', left: '50%', transform: 'translateX(-50%) rotate(30deg)', width: '88px', height: '8px' },
+    { bottom: '90px', left: '50%', transform: 'translateX(-50%) rotate(-20deg)', width: '75px', height: '8px' },
+    { bottom: '190px', left: '50%', transform: 'translateX(-50%) rotate(15deg)', width: '82px', height: '8px' },
   ];
 
   const tomatoes: any[] = [
-    { bottom: '145px', left: '25%', transform: 'translateX(-50%)', size: 18, color: '#FF6B35' },
-    { bottom: '125px', left: '75%', transform: 'translateX(-50%)', size: 20, color: '#FF5722' },
-    { bottom: '105px', left: '20%', transform: 'translateX(-50%)', size: 16, color: '#FF7043' },
-    { bottom: '165px', left: '80%', transform: 'translateX(-50%)', size: 19, color: '#FF5722' },
-    { bottom: '135px', left: '45%', transform: 'translateX(-50%)', size: 17, color: '#FF6B35' },
+    { bottom: '155px', left: '20%', transform: 'translateX(-50%)', size: 22, color: '#FF6B35' },
+    { bottom: '135px', left: '80%', transform: 'translateX(-50%)', size: 25, color: '#FF5722' },
+    { bottom: '115px', left: '15%', transform: 'translateX(-50%)', size: 20, color: '#FF7043' },
+    { bottom: '175px', left: '85%', transform: 'translateX(-50%)', size: 24, color: '#FF5722' },
+    { bottom: '145px', left: '40%', transform: 'translateX(-50%)', size: 21, color: '#FF6B35' },
+    { bottom: '95px', left: '25%', transform: 'translateX(-50%)', size: 19, color: '#FF7043' },
+    { bottom: '125px', left: '60%', transform: 'translateX(-50%)', size: 23, color: '#FF5722' },
+    { bottom: '165px', left: '55%', transform: 'translateX(-50%)', size: 20, color: '#FF6B35' },
+    { bottom: '185px', left: '70%', transform: 'translateX(-50%)', size: 22, color: '#FF5722' },
+    { bottom: '105px', left: '45%', transform: 'translateX(-50%)', size: 18, color: '#FF7043' },
   ];
 
   const leaves: React.CSSProperties[] = [
     // Large leaves
-    { bottom: '80px', left: '50%', transform: 'translateX(-50%) rotate(-15deg)', width: '85px', height: '55px', borderRadius: '42px 42px 42px 10px' },
-    { bottom: '110px', left: '50%', transform: 'translateX(-50%) rotate(20deg)', width: '80px', height: '52px', borderRadius: '40px 40px 10px 42px' },
-    { bottom: '170px', left: '50%', transform: 'translateX(-50%) rotate(-25deg)', width: '75px', height: '48px', borderRadius: '37px 37px 37px 8px' },
+    { bottom: '75px', left: '50%', transform: 'translateX(-50%) rotate(-10deg)', width: '95px', height: '60px', borderRadius: '47px 47px 47px 12px' },
+    { bottom: '105px', left: '50%', transform: 'translateX(-50%) rotate(25deg)', width: '90px', height: '58px', borderRadius: '45px 45px 11px 47px' },
+    { bottom: '180px', left: '50%', transform: 'translateX(-50%) rotate(-30deg)', width: '85px', height: '54px', borderRadius: '42px 42px 42px 9px' },
     // Branch leaves
-    { bottom: '150px', left: '30%', transform: 'translateX(-50%) rotate(-45deg)', width: '65px', height: '42px', borderRadius: '32px 32px 32px 6px' },
-    { bottom: '130px', left: '70%', transform: 'translateX(-50%) rotate(50deg)', width: '60px', height: '38px', borderRadius: '30px 30px 5px 32px' },
-    { bottom: '95px', left: '35%', transform: 'translateX(-50%) rotate(-55deg)', width: '58px', height: '36px', borderRadius: '29px 29px 29px 5px' },
-    { bottom: '115px', left: '65%', transform: 'translateX(-50%) rotate(60deg)', width: '55px', height: '34px', borderRadius: '27px 27px 4px 29px' },
+    { bottom: '160px', left: '25%', transform: 'translateX(-50%) rotate(-50deg)', width: '75px', height: '48px', borderRadius: '37px 37px 37px 7px' },
+    { bottom: '140px', left: '75%', transform: 'translateX(-50%) rotate(55deg)', width: '70px', height: '44px', borderRadius: '35px 35px 6px 37px' },
+    { bottom: '100px', left: '30%', transform: 'translateX(-50%) rotate(-60deg)', width: '68px', height: '42px', borderRadius: '34px 34px 34px 6px' },
+    { bottom: '120px', left: '70%', transform: 'translateX(-50%) rotate(65deg)', width: '65px', height: '40px', borderRadius: '32px 32px 5px 34px' },
+    { bottom: '85px', left: '40%', transform: 'translateX(-50%) rotate(-35deg)', width: '72px', height: '46px', borderRadius: '36px 36px 36px 8px' },
+    { bottom: '195px', left: '60%', transform: 'translateX(-50%) rotate(40deg)', width: '78px', height: '50px', borderRadius: '39px 39px 7px 39px' },
   ];
 
   const titleStyle: React.CSSProperties = {
@@ -166,7 +175,7 @@ export const MaturePlantScene: React.FC = () => {
     <div style={containerStyle}>
       <div style={backgroundPattern} />
       <div style={sunRays} />
-      
+
       <div style={plantContainer}>
         <div style={stakeStyle} />
         <div style={mainStem} />
@@ -177,8 +186,8 @@ export const MaturePlantScene: React.FC = () => {
               ...branchStyle,
               position: 'absolute',
               background: 'linear-gradient(to right, #4CAF50, #66BB6A)',
-              borderRadius: '3px',
-              boxShadow: '0 0 12px rgba(76, 175, 80, 0.6)',
+              borderRadius: '4px',
+              boxShadow: '0 0 15px rgba(76, 175, 80, 0.7)',
             }}
           />
         ))}
@@ -189,7 +198,7 @@ export const MaturePlantScene: React.FC = () => {
               ...leafStyle,
               position: 'absolute',
               background: 'linear-gradient(45deg, #4CAF50, #66BB6A)',
-              boxShadow: '0 4px 18px rgba(76, 175, 80, 0.4)',
+              boxShadow: '0 4px 20px rgba(76, 175, 80, 0.5)',
             }}
           />
         ))}
@@ -211,10 +220,10 @@ export const MaturePlantScene: React.FC = () => {
         ))}
       </div>
 
-      <h1 style={titleStyle}>Bearing Fruit</h1>
+      <h1 style={titleStyle}>Fully Mature</h1>
       <p style={subtitleStyle}>
-        Support with stakes and water deeply<br />
-        to nourish the growing bounty
+        Laden with ripe tomatoes ready for harvest<br />
+        The plant reaches its full productive potential
       </p>
     </div>
   );
