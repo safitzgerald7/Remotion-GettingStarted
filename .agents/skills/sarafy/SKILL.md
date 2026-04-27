@@ -1,6 +1,6 @@
 ---
 name: sarafy
-description: Use this skill whenever creating, modifying, or extending a Remotion project, implementation, or any video composition work. This skill enforces design consistency standards for transitions, typography, and visual elements between frames, leveraging Google Stitch DESIGN.md principles to ensure a cohesive visual identity across the entire project. Make sure to apply this skill for any Remotion scene creation, animation updates, video editing, UI component development, adding new scenes to videos, updating video sequences, ensuring visual coherence in Remotion compositions, or maintaining design systems in video projects to achieve professional, consistent video output.
+description: Use this skill whenever creating, modifying, or extending a Remotion project, implementation, or any video composition work. This skill enforces design consistency standards for transitions, typography, layout, and backgrounds, and it prioritizes solid white video canvases, centered scene composition, consistent visual systems, realistic image assets generated via OpenAI Image Gen 2, zero fade in/out transitions, on-screen captions for every scene, ElevenLabs narration for each caption, and OpenAI-powered image generation. Make sure to apply this skill for any Remotion scene creation, animation updates, video editing, UI component development, adding new scenes to videos, updating video sequences, ensuring visual coherence in Remotion compositions, or maintaining design systems in video projects to achieve professional, consistent video output.
 ---
 
 # Sarafy: Remotion Design Consistency Skill
@@ -27,10 +27,23 @@ Every Remotion project should have a `design.md` file in the root directory that
 - **Spacing Scale**: Consistent spacing units (4px, 8px, 16px, etc.)
 - **Component Styles**: Button styles, text treatments, layout patterns
 - **Animation Guidelines**: Transition durations, easing functions
+- **Background Rules**: Solid full-frame backgrounds only, no transparency
+- **Layout Rules**: Center all scene layouts horizontally and vertically
 
 If no `design.md` exists, create one based on the project's visual identity.
 
-### 2. Transition Standards
+### 2. Background, Layout, and Transition Standards
+
+- **Video Background**: Use `#FFFFFF` for the full video canvas background.
+- **No Transparent Backgrounds**: Scene backgrounds must be solid fills or textures on a white canvas; never rely on transparency.
+- **Centered Content**: Align key visual elements and text both vertically and horizontally in every scene.
+- **Frame Continuity**: Keep the background and layout stable across scene changes to support seamless transitions.
+- **Zero Fade**: Do not use fade in or fade out on any scene elements or between scene transitions. Use direct scene cuts or motion-based transitions without opacity animation.
+- **Captions**: Every scene must render an on-screen caption generated from the scene metadata.
+- **Narration**: Every caption must be paired with spoken narration generated via ElevenLabs.
+- **Image Generation**: Use OpenAI Image Gen 2 for the primary realistic scene assets instead of SVG vector graphics.
+
+### 3. Transition Standards
 
 - **Duration**: Use consistent timing (300ms for quick transitions, 500ms for scene changes)
 - **Easing**: Prefer ease-in-out for smooth, natural motion
@@ -50,6 +63,7 @@ If no `design.md` exists, create one based on the project's visual identity.
 - **Spacing**: Use the spacing scale for all margins, padding
 - **Component Reuse**: Build reusable components with consistent styling
 - **Frame-to-Frame Continuity**: Maintain consistent backgrounds, layouts
+- **Realistic Imagery**: Avoid SVG graphics for primary scene assets; prefer realistic image assets generated or sourced through Copilot SDK ambient auth with consistent lighting and texture.
 
 ## Workflow
 
@@ -123,14 +137,17 @@ When extending Remotion videos with new scenes:
 - **Register Components**: Add new scene components to the `sceneComponents` mapping in `Video.tsx`
 - **Update Sequence**: Modify `scenes.ts` to include the new scene in the correct order
 - **Set Durations**: Update `durations.json` with appropriate frame counts for the new scene
-- **Maintain Transitions**: Ensure fade transitions between scenes use consistent timing (15-30 frames)
+- **Maintain Transitions**: Avoid fade in/out transitions; use direct cuts or motion-based builds instead
 - **Composition Updates**: Update the main composition in `Root.tsx` if needed
 
 ## Quality Checks
 
 - All colors used are from the design.md palette
 - Typography matches defined specifications
-- Transitions use approved durations and easing
+- No fade in or fade out is used in scenes or transitions
+- Captions exist for every scene and are readable on-screen
+- Every caption has a corresponding ElevenLabs narration audio asset
+- Primary scene imagery is sourced or generated with OpenAI rather than SVG-only graphics
 - Spacing follows the established scale
 - New scenes are properly integrated into the video sequence
 - Components are reusable and consistently styled

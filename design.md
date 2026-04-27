@@ -6,9 +6,7 @@
 - Dark Green: #388E3C
 - Tomato Red: #FF6B35
 - Tomato Orange: #FF5722
-- Background Gradient Start: #dceddc
-- Background Gradient Middle: #c8e6c8
-- Background Gradient End: #b8ddb8
+- Background: #FFFFFF
 - Text Primary: #0D1117
 - Text Secondary: #161B22
 - Stake Brown: #8B5A2B
@@ -39,8 +37,9 @@
 - Wind Sway: 2 seconds cycle
 
 ## Visual Elements
-- Background: Linear gradient with subtle dot pattern overlay
+- Background: Solid white canvas with subtle texture or soft tonal overlays when needed, never transparent
 - Plants: Gradient fills with drop shadows
 - Tomatoes: Radial gradients with highlights
 - Sun Rays: Radial gradient for lighting effect
+- Layout: Horizontal and vertical centering for main scene composition
 - Animations: Scale, translate, rotate with easing

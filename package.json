@@ -8,7 +8,10 @@
     "render": "remotion render src/index.ts TomatoLifecycle out/video.mp4",
     "generate:audio": "ts-node scripts/generate-audio.ts",
     "generate:durations": "ts-node scripts/getDurations.ts",
-    "build:video": "npm run generate:audio && npm run generate:durations && npm run render",
+    "build:video": "npm run generate:images && npm run generate:audio && npm run generate:durations && npm run render",
+    "generate:images": "ts-node scripts/generate-images.ts",
+    "create-video": "ts-node scripts/create-video.ts",
+    "gen": "npm run create-video -- --prompt-to-video",
     "test": "playwright test",
     "test:ui": "playwright test --ui"
   },
@@ -36,6 +39,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
+    "openai": "^4.0.0",
     "playwright": "^1.59.1",
     "typescript": "^5.0.0"
   }

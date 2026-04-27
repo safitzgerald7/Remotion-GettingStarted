@@ -17,20 +17,33 @@ function getDuration(file: string): Promise<number> {
   });
 }
 
-async function run() {
-  const files = fs.readdirSync(audioDir);
+export async function generateDurations() {
+  if (!fs.existsSync(audioDir)) {
+    throw new Error('Audio directory does not exist; cannot generate durations.');
+  }
+
+  const files = fs.readdirSync(audioDir).filter((file) => file.endsWith('.mp3'));
+  if (files.length === 0) {
+    throw new Error('No audio files found; cannot generate durations.');
+  }
+
   const durations: Record<string, number> = {};
 
   for (const file of files) {
     const fullPath = path.join(audioDir, file);
     const seconds = await getDuration(fullPath);
-    durations[file.replace(".mp3", "")] = Math.ceil(seconds * fps);
+    durations[file.replace('.mp3', '')] = Math.ceil(seconds * fps);
   }
 
   fs.writeFileSync(
-    path.join(process.cwd(), "src/data/durations.json"),
+    path.join(process.cwd(), 'src/data/durations.json'),
     JSON.stringify(durations, null, 2)
   );
 }
 
-run();
+if (process.argv.some((arg) => arg.endsWith('getDurations.ts'))) {
+  generateDurations().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}
