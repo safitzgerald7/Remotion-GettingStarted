@@ -51,6 +51,7 @@ The project uses headless Playwright MCP for automated visual validation:
   - Preview rendering validation
   - Transition smoothness testing
   - Font loading confirmation
+  - Agent-v TDD before Remotion agent or instruction changes: write evals and a failing test first
 
 ### Playwright Testing Agent
 - **Trigger**: Test file modifications, validation logic changes
@@ -67,6 +68,7 @@ The project uses headless Playwright MCP for automated visual validation:
 2. **Screenshot Capture**: Generate before/after comparison images
 3. **Error Detection**: Fail builds on critical rendering errors
 4. **Performance Check**: Validate rendering performance metrics
+5. **Agent-v TDD**: Require agent-v evals and failing test criteria before any Remotion agent or instruction edits
 
 ### Continuous Integration
 1. **Headless Testing**: All CI runs use headless Playwright MCP

@@ -1,0 +1,51 @@
+{
+  "skill_name": "SDLC",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "You are asked to implement a new feature and coordinate the development process. Use Red/Green/Refactor TDD loops, create agentevals.io-style evaluation criteria, and if UI is involved, validate against design.md with Playwright. Return a plan and eval updates.",
+      "expected_output": "A TDD-first development plan with explicit eval criteria and Playwright design validation guidance.",
+      "files": [],
+      "expectations": [
+        "Uses Red/Green/Refactor language for the development loop.",
+        "Includes agentevals.io-style evaluation criteria or rubric.",
+        "Mentions Playwright UI validation when UI or design work is present."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "The user reports a design feedback item: 'button animation feels sluggish and tone doesn't match the green brand.' Update the eval criteria and describe the next TDD iteration.",
+      "expected_output": "A revised evaluation rubric that captures the feedback as acceptance criteria and defines the next test-driven iteration.",
+      "files": [],
+      "expectations": [
+        "Translates the feedback into specific evaluation criteria.",
+        "Includes a new Red/Green/Refactor iteration plan.",
+        "References design.md requirements for brand consistency or color/animation guidance.",
+        "Captures the user feedback item directly as a rubric or eval criterion."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Create a developer-facing checklist for running agentevals.io, installing missing tools, and executing Playwright UI tests against the design system.",
+      "expected_output": "A practical checklist that installs missing tools, updates evals.json, and runs Playwright UI tests for design validation.",
+      "files": [],
+      "expectations": [
+        "Lists installation steps for agentevals, agent-v, and Playwright.",
+        "Includes steps to capture user feedback in eval criteria.",
+        "Directs the reviewer to use Playwright UI tests for design.md validation."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "You are asked to update a Remotion agent instruction or behavior. Write agent-v eval prompts that define the first failing Red test before making any code changes. Return the evaluation cases and the TDD plan.",
+      "expected_output": "A set of agent-v eval prompts and a development plan stating that code changes should only begin after the evals exist.",
+      "files": [],
+      "expectations": [
+        "Creates agent-v eval prompts for the Remotion agent task.",
+        "Specifies that production code or agent instruction changes must not begin until the eval definitions exist.",
+        "Uses Red/Green/Refactor language and mentions running agent-v as the test harness.",
+        "Includes at least one failing condition for the initial Red step."
+      ]
+    }
+  ]
+}

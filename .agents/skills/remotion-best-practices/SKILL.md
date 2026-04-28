@@ -9,6 +9,10 @@ metadata:
 
 Use this skills whenever you are dealing with Remotion code to obtain the domain-specific knowledge.
 
+- Before changing Remotion agent instructions or behavior, write agent-v evals that capture the expected Red/Green/Refactor workflow and a failing first step.
+- Treat agent-v as the primary test suite for Remotion agent workflow changes and define the first failing condition before modifying code.
+- Store the evaluation prompts in `evals/evals.json` so the Remotion agent change process can be replayed and validated.
+
 ## New project setup
 
 When in an empty folder or workspace with no existing Remotion project, scaffold one using:

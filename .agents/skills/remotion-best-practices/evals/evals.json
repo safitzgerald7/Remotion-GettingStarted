@@ -1,0 +1,17 @@
+{
+  "skill_name": "remotion-best-practices",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "You are asked to change Remotion agent instructions or behavior. Before making any code or instruction edits, write agent-v evals that capture the required Red/Green/Refactor workflow and define a failing first step. Return the eval prompts and the first failing condition.",
+      "expected_output": "A set of agent-v evaluation cases and a TDD plan stating that no Remotion code or instruction changes occur until the evals exist.",
+      "files": [],
+      "expectations": [
+        "Includes at least one agent-v eval prompt that describes the Red step in the TDD loop.",
+        "Specifies that no Remotion agent or instruction code may be modified before the eval definitions exist.",
+        "Mentions using agent-v as the test harness for the Remotion agent workflow.",
+        "Returns a minimal test-driven plan for the Remotion agent change."
+      ]
+    }
+  ]
+}
