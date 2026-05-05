@@ -1,0 +1,18 @@
+{
+  "sceneId": "mature-extended",
+  "svgPath": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature-extended/eval-run-iter-1/mature-extended.svg",
+  "original_svg": "/workspaces/Remotion-GettingStarted/src/assets/images/mature-extended.svg",
+  "iteration": 1,
+  "action": null,
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1024,
+    "height": 1024
+  },
+  "screenshots": {
+    "full": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature-extended/eval-run-iter-1/page.html",
+    "tight": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature-extended/eval-run-iter-1/tight.png"
+  },
+  "console": []
+}

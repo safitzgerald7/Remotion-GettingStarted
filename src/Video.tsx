@@ -31,7 +31,6 @@ export const Video: React.FC = () => {
           <TransitionSeries.Sequence key={scene.id} durationInFrames={duration}>
             <SceneShell
               heading={scene.heading}
-              subtitle={scene.subtitle}
               caption={scene.text}
               imageSrc={imageSrc}
               accentColors={accentColors}

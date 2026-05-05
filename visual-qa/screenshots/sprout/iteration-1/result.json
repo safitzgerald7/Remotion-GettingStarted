@@ -1,0 +1,18 @@
+{
+  "sceneId": "sprout",
+  "svgPath": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/sprout/iteration-1/sprout.svg",
+  "original_svg": "/workspaces/Remotion-GettingStarted/src/assets/images/sprout.svg",
+  "iteration": 1,
+  "action": null,
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1024,
+    "height": 1024
+  },
+  "screenshots": {
+    "full": "visual-qa/screenshots/sprout/iteration-1/page.html",
+    "tight": "visual-qa/screenshots/sprout/iteration-1/tight.png"
+  },
+  "console": []
+}

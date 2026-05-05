@@ -1,0 +1,18 @@
+{
+  "sceneId": "mature",
+  "svgPath": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature/iteration-1/mature.svg",
+  "original_svg": "/workspaces/Remotion-GettingStarted/src/assets/images/mature.svg",
+  "iteration": 1,
+  "action": null,
+  "bbox": {
+    "x": 0,
+    "y": 0,
+    "width": 1024,
+    "height": 1024
+  },
+  "screenshots": {
+    "full": "visual-qa/screenshots/mature/iteration-1/page.html",
+    "tight": "visual-qa/screenshots/mature/iteration-1/tight.png"
+  },
+  "console": []
+}

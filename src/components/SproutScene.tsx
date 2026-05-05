@@ -5,7 +5,6 @@ export const SproutScene: React.FC = () => {
   return (
     <SceneShell
       heading="Sprout Stage"
-      subtitle="Craft a realistic, consistent tomato lifecycle scene with stable on-screen text and motion."
     />
   );
 };

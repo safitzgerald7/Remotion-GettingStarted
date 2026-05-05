@@ -1,0 +1,33 @@
+{
+  "scene": "mature",
+  "iterations": [
+    {
+      "iteration": 1,
+      "action": "applied_smart_v1",
+      "run": {
+        "code": 0,
+        "stdout": "Wrote /workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature/eval-run-iter-1\n",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature/eval-run-iter-1"
+      },
+      "result": {
+        "sceneId": "mature",
+        "svgPath": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature/eval-run-iter-1/mature.svg",
+        "original_svg": "/workspaces/Remotion-GettingStarted/src/assets/images/mature.svg",
+        "iteration": 1,
+        "action": null,
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 1024,
+          "height": 1024
+        },
+        "screenshots": {
+          "full": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature/eval-run-iter-1/page.html",
+          "tight": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature/eval-run-iter-1/tight.png"
+        },
+        "console": []
+      }
+    }
+  ]
+}

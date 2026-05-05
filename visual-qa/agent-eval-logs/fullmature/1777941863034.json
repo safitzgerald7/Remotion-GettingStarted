@@ -1,0 +1,20 @@
+{
+  "scene": "fullmature",
+  "iterations": [
+    {
+      "iteration": 1,
+      "action": "copied_original",
+      "run": {
+        "code": 2,
+        "stdout": "",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/fullmature/eval-run-iter-1"
+      },
+      "result": {
+        "sceneId": "fullmature",
+        "error": "missing_svg",
+        "logs": []
+      }
+    }
+  ]
+}

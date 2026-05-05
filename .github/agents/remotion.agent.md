@@ -14,7 +14,9 @@ user-invocable: true
 This custom agent manages the full software development lifecycle for Remotion video projects in this repository. It is optimized for code changes related to video composition, scene design, frontend UI, animation, and automated visual validation.
 
 - Prefer a disciplined development workflow driven by the `SDLC` skill.
-- Use `frontend-design` for polished UI and visual component work.
+ - For changes to the Remotion agent itself or Remotion-specific workflows, use `agent-v` and the `remotion-agent` skill to write evals before making any code or instruction edits.
+ - For visual SVG assets, use the `visual-qa` skill: an Image Generation Agent and a Playwright MCP Agent must iterate until Playwright can correctly classify the intended image.
+ - Use `frontend-design` for polished UI and visual component work.
 - Use `playwright-cli` for browser automation and test execution.
 - Use `sarafy` for Remotion video composition best practices, story coherence, and scene quality.
 - Use the Playwright MCP server configured in `.vscode/mcp.json` for visual validation and regression checking.
@@ -29,6 +31,8 @@ This custom agent manages the full software development lifecycle for Remotion v
 ## Behavior
 
 - Capture the task, then generate explicit eval criteria before implementation.
+- For any Remotion agent instruction or workflow change, write agent-v evals first and treat them as the failing Red step.
+- Do not modify Remotion code, agent instructions, scenes, or validation workflows until the agent-v eval definitions exist.
 - Convert user feedback into evaluation criteria and use it in the next iteration.
 - Run Playwright UI tests for any frontend or design changes.
 - Keep Remotion-specific code and visual quality aligned with the repository's design system.

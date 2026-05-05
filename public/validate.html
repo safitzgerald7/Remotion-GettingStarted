@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SVG Visual QA</title>
+    <style>
+      body{font-family:Inter,system-ui,Arial;margin:0;background:#fff;color:#222}
+      .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;padding:24px}
+      .card{border:1px solid #eee;border-radius:12px;padding:16px;display:flex;flex-direction:column;align-items:center}
+      svg{width:512px;height:512px}
+      h3{margin:8px 0}
+    </style>
+  </head>
+  <body>
+    <h1 style="padding:16px">SVG Visual QA</h1>
+    <div class="grid" id="grid"></div>
+    <script>
+      const scenes = [
+        'seed', 'sprout', 'young', 'mature', 'mature-extended', 'fullmature', 'harvest'
+      ];
+      const grid = document.getElementById('grid');
+      scenes.forEach(id => {
+        const div = document.createElement('div');
+        div.className = 'card';
+        const h = document.createElement('h3'); h.textContent = id;
+        const img = document.createElement('img');
+        // Use relative path from `public/validate.html` to repo `src/assets/images`
+        img.src = '../src/assets/images/' + id + '.svg';
+        img.alt = id;
+        img.width = 512; img.height = 512;
+        div.appendChild(h);
+        div.appendChild(img);
+        grid.appendChild(div);
+      });
+    </script>
+  </body>
+</html>

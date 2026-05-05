@@ -1,0 +1,21 @@
+{
+  "sceneId": "sprout",
+  "svgPath": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/sprout/iteration-8/sprout.svg",
+  "original_svg": "/workspaces/Remotion-GettingStarted/src/assets/images/sprout.svg",
+  "iteration": 8,
+  "action": {
+    "action": "hue_shift=160, add_stroke, scale=1.070",
+    "outSvgPath": "visual-qa/screenshots/sprout/iteration-8/sprout.svg"
+  },
+  "bbox": {
+    "x": 8,
+    "y": 168.875,
+    "width": 1008,
+    "height": 1024
+  },
+  "screenshots": {
+    "full": "visual-qa/screenshots/sprout/iteration-8/page.html",
+    "tight": "visual-qa/screenshots/sprout/iteration-8/tight.png"
+  },
+  "console": []
+}

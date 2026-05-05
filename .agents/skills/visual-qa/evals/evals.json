@@ -1,0 +1,54 @@
+{
+  "skill_name": "visual-qa",
+  "evals": [
+    {
+      "id": 1,
+      "scene": "fullmature",
+      "prompt": "Validate generated SVG for scene fullmature. Expected: fullmature visual with clear subject, high contrast, central composition.",
+      "expected": "pass",
+      "files": []
+    },
+    {
+      "id": 2,
+      "scene": "harvest",
+      "prompt": "Validate generated SVG for scene harvest. Expected: harvest visual with clear subject, high contrast, central composition.",
+      "expected": "pass",
+      "files": []
+    },
+    {
+      "id": 3,
+      "scene": "mature",
+      "prompt": "Validate generated SVG for scene mature. Expected: mature visual with clear subject, high contrast, central composition.",
+      "expected": "pass",
+      "files": []
+    },
+    {
+      "id": 4,
+      "scene": "mature-extended",
+      "prompt": "Validate generated SVG for scene mature-extended. Expected: mature-extended visual with clear subject, high contrast, central composition.",
+      "expected": "pass",
+      "files": []
+    },
+    {
+      "id": 5,
+      "scene": "seed",
+      "prompt": "Validate generated SVG for scene seed. Expected: seed visual with clear subject, high contrast, central composition.",
+      "expected": "pass",
+      "files": []
+    },
+    {
+      "id": 6,
+      "scene": "sprout",
+      "prompt": "Validate generated SVG for scene sprout. Expected: sprout visual with clear subject, high contrast, central composition.",
+      "expected": "pass",
+      "files": []
+    },
+    {
+      "id": 7,
+      "scene": "young",
+      "prompt": "Validate generated SVG for scene young. Expected: young visual with clear subject, high contrast, central composition.",
+      "expected": "pass",
+      "files": []
+    }
+  ]
+}

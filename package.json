@@ -13,7 +13,8 @@
     "create-video": "ts-node scripts/create-video.ts",
     "gen": "npm run create-video -- --prompt-to-video",
     "test": "playwright test",
-    "test:ui": "playwright test --ui"
+    "test:ui": "playwright test --ui",
+    "eval:run": "ts-node scripts/run-agent-eval.ts"
   },
   "dependencies": {
     "@elevenlabs/elevenlabs-js": "^2.42.0",
@@ -38,6 +39,7 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
+    "@playwright/test": "^1.59.1",
     "@types/react": "^18.2.0",
     "openai": "^4.0.0",
     "playwright": "^1.59.1",

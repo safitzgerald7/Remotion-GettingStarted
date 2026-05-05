@@ -1,0 +1,35 @@
+{
+  "scene": "seed",
+  "iterations": [
+    {
+      "iteration": 1,
+      "action": "copied_original",
+      "run": {
+        "code": 2,
+        "stdout": "",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/seed/eval-run-iter-1"
+      },
+      "result": {
+        "sceneId": "seed",
+        "error": "missing_svg",
+        "logs": []
+      }
+    },
+    {
+      "iteration": 2,
+      "action": "copied_original",
+      "run": {
+        "code": 2,
+        "stdout": "",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/seed/eval-run-iter-2"
+      },
+      "result": {
+        "sceneId": "seed",
+        "error": "missing_svg",
+        "logs": []
+      }
+    }
+  ]
+}

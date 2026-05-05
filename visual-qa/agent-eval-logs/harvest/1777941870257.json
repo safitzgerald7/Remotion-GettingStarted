@@ -1,0 +1,95 @@
+{
+  "scene": "harvest",
+  "iterations": [
+    {
+      "iteration": 1,
+      "action": "copied_original",
+      "run": {
+        "code": 2,
+        "stdout": "",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/harvest/eval-run-iter-1"
+      },
+      "result": {
+        "sceneId": "harvest",
+        "error": "missing_svg",
+        "logs": []
+      }
+    },
+    {
+      "iteration": 2,
+      "action": "copied_original",
+      "run": {
+        "code": 2,
+        "stdout": "",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/harvest/eval-run-iter-2"
+      },
+      "result": {
+        "sceneId": "harvest",
+        "error": "missing_svg",
+        "logs": []
+      }
+    },
+    {
+      "iteration": 3,
+      "action": "copied_original",
+      "run": {
+        "code": 2,
+        "stdout": "",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/harvest/eval-run-iter-3"
+      },
+      "result": {
+        "sceneId": "harvest",
+        "error": "missing_svg",
+        "logs": []
+      }
+    },
+    {
+      "iteration": 4,
+      "action": "copied_original",
+      "run": {
+        "code": 2,
+        "stdout": "",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/harvest/eval-run-iter-4"
+      },
+      "result": {
+        "sceneId": "harvest",
+        "error": "missing_svg",
+        "logs": []
+      }
+    },
+    {
+      "iteration": 5,
+      "action": "copied_original",
+      "run": {
+        "code": 2,
+        "stdout": "",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/harvest/eval-run-iter-5"
+      },
+      "result": {
+        "sceneId": "harvest",
+        "error": "missing_svg",
+        "logs": []
+      }
+    },
+    {
+      "iteration": 6,
+      "action": "copied_original",
+      "run": {
+        "code": 2,
+        "stdout": "",
+        "stderr": "",
+        "outDir": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/harvest/eval-run-iter-6"
+      },
+      "result": {
+        "sceneId": "harvest",
+        "error": "missing_svg",
+        "logs": []
+      }
+    }
+  ]
+}

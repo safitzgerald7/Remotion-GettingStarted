@@ -8,7 +8,6 @@ const playfair = loadPlayfair();
 
 type SceneShellProps = {
   heading: string;
-  subtitle: string;
   caption?: string;
   imageSrc?: string;
   accentColors?: [string, string];
@@ -16,7 +15,6 @@ type SceneShellProps = {
 
 export const SceneShell: React.FC<SceneShellProps> = ({
   heading,
-  subtitle,
   caption = '',
   imageSrc,
   accentColors = ['#FFFFFF', '#F8F8F8'],
@@ -91,14 +89,7 @@ export const SceneShell: React.FC<SceneShellProps> = ({
     color: '#0D1117',
   };
 
-  const subtitleStyle: CSSProperties = {
-    marginTop: '24px',
-    fontFamily: inter.fontFamily,
-    fontSize: '28px',
-    lineHeight: 1.6,
-    color: '#2D3840',
-    marginBottom: '32px',
-  };
+  // subtitles are intentionally removed to avoid redundant instructional content
 
   const captionStyle: CSSProperties = {
     fontFamily: inter.fontFamily,
@@ -159,7 +150,6 @@ export const SceneShell: React.FC<SceneShellProps> = ({
       <div style={contentStyle}>
         <div style={panelStyle}>
           <h1 style={headingStyle}>{heading}</h1>
-          <p style={subtitleStyle}>{subtitle}</p>
           {caption ? <div style={captionStyle}>{caption}</div> : null}
         </div>
         <div style={imageWrapperStyle}>

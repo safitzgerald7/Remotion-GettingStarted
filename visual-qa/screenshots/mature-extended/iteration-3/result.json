@@ -1,0 +1,21 @@
+{
+  "sceneId": "mature-extended",
+  "svgPath": "/workspaces/Remotion-GettingStarted/visual-qa/screenshots/mature-extended/iteration-3/mature-extended.svg",
+  "original_svg": "/workspaces/Remotion-GettingStarted/src/assets/images/mature-extended.svg",
+  "iteration": 3,
+  "action": {
+    "action": "hue_shift=60, add_stroke, scale=1.020",
+    "outSvgPath": "visual-qa/screenshots/mature-extended/iteration-3/mature-extended.svg"
+  },
+  "bbox": {
+    "x": 8,
+    "y": 168.875,
+    "width": 1008,
+    "height": 1024
+  },
+  "screenshots": {
+    "full": "visual-qa/screenshots/mature-extended/iteration-3/page.html",
+    "tight": "visual-qa/screenshots/mature-extended/iteration-3/tight.png"
+  },
+  "console": []
+}

@@ -1,0 +1,28 @@
+{
+  "skill_name": "remotion-agent",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "You are asked to change the Remotion agent's instructions or behavior. Before making any code or agent instruction edits, write agent-v eval prompts that define the Red step of Red/Green/Refactor TDD and a clear failing condition. Return only the eval prompts, expected assertions, and the test-first plan.",
+      "expected_output": "A set of agent-v evaluation cases and a TDD-first plan stating that no production code or instruction changes may begin until the evals exist.",
+      "files": [],
+      "expectations": [
+        "Creates agent-v eval prompts before any Remotion agent or code changes.",
+        "Defines a specific failing condition for the initial Red step.",
+        "States that Remotion agent changes are blocked until the eval definitions exist.",
+        "Uses Red/Green/Refactor language and mentions agent-v as the harness."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "You are validating a Remotion agent workflow change. Identify and return the exact rules the agent must enforce to ensure agent-v evals are written first, before any edits are applied to Remotion code or agent instructions.",
+      "expected_output": "A concise set of enforcement rules for Remotion agent TDD that can be used as agent-v eval expectations.",
+      "files": [],
+      "expectations": [
+        "Lists explicit rules requiring agent-v eval creation before code edits.",
+        "Includes a rule forbidding production changes until the eval suite exists.",
+        "Refers to the Remotion agent workflow specifically, not general SDLC guidance."
+      ]
+    }
+  ]
+}
